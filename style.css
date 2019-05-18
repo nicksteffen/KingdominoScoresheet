@@ -11,6 +11,20 @@ input {
     justify-content:center;
 }
 
+.temp {
+    display: flex;
+}
+
+.labels .label {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  min-height: 10vh;
+  font-size: 24px;
+  margin: 0;
+  
+}
+
 .scores {
   display:flex;
   justify-content:center;
@@ -32,8 +46,8 @@ input {
 
 .player input {
     max-width: 18vw;
-    width: 90%;%;
-    min-height: 10vh;
+    width: 90%;
+    min-height: 8vh;
     font-size: 24px;
 }
 
