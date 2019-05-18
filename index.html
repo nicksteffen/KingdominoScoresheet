@@ -12,7 +12,7 @@
         var all = document.getElementsByClassName(className);
         var allVals = Array.from(all)
         sum = allVals.reduce(getSum, 0);
-        var y = document.getElementById("answer");
+        var y = document.getElementById(player + "answer");
         y.value = sum;
     }
 
@@ -67,7 +67,7 @@
     <input type="number" class="P1score score" id="P1swamp" onchange="totalScoreForPlayer('P1')" value="0">
     <input type="number" class="P1score score" id="P1forest" onchange="totalScoreForPlayer('P1')" value="0">
     <input type="number" class="P1score score" id="P1mines" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" id="answer" readonly>
+    <input type="number" id="P1answer" readonly>
     </div>
 
     <div class="player2 player">
@@ -78,7 +78,7 @@
     <input type="number" class="P2score score" id="P2swamp" onchange="totalScoreForPlayer('P2')" value="0">
     <input type="number" class="P2score score" id="P2forest" onchange="totalScoreForPlayer('P2')" value="0">
     <input type="number" class="P2score score" id="P2mines" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" id="answer" readonly>
+    <input type="number" id="P2answer" readonly>
     </div>
 
     <div class="player3 player">
@@ -89,7 +89,7 @@
     <input type="number" class="P3score score" id="P3swamp" onchange="totalScoreForPlayer('P3')" value="0">
     <input type="number" class="P3score score" id="P3forest" onchange="totalScoreForPlayer('P3')" value="0">
     <input type="number" class="P3score score" id="P3mines" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" id="answer" readonly>
+    <input type="number" id="P3answer" readonly>
     </div>
 
     <div class="player4 player">
@@ -100,7 +100,7 @@
     <input type="number" class="P4score score" id="P4swamp" onchange="totalScoreForPlayer('P4')" value="0">
     <input type="number" class="P4score score" id="P4forest" onchange="totalScoreForPlayer('P4')" value="0">
     <input type="number" class="P4score score" id="P4mines" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" id="answer" readonly>
+    <input type="number" id="P4answer" readonly>
     </div>
     </div>
     </div>
