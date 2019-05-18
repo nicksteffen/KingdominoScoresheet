@@ -1,0 +1,59 @@
+input {
+    text-align: center;
+}
+
+.title {
+    height: 10vh;
+    width: 80vw;
+    margin: 0 10vw 0 10vw;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.scores {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:80vh;
+  margin: 0 10vw 0 10vw;
+}
+
+
+.player {
+    display:flex;
+    flex-direction: column;
+    min-width: 25%;
+    max-width: 20vw;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 100%;
+}
+
+.player input {
+    max-width: 18vw;
+    width: 90%;%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+   -moz-appearance: textfield;
+}
+
+.buttons {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 80vw;
+    margin: 0 10vw 0 10vw;
+}
+
+.buttons input {
+    padding: 5px;
+    margin: 5px;
+}

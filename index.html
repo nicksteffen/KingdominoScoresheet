@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <script> 
+    function totalScoreForPlayer(player) {
+        console.log(player);
+        var className = player + 'score';
+        console.log(className);
+        var all = document.getElementsByClassName(className);
+        var allVals = Array.from(all)
+        sum = allVals.reduce(getSum, 0);
+        var y = document.getElementById("answer");
+        y.value = sum;
+    }
+
+    function getSum(total, num) {
+        return total + parseInt(num.value);
+    }
+
+    function resetNames() {
+        var names =  document.getElementsByClassName('name');
+        console.log(names);
+        for (i = 0; i < names.length; i++) {
+            names[i].value = "Player " + parseInt((i + 1));
+        }
+    }
+    
+    function resetValues() {
+        console.log('reset scores');
+        var scores = document.getElementsByClassName('score');
+        for (i = 0; i < scores.length; i++) {
+            scores[i].value = 0;
+        }
+    }
+
+    function resetGame() {
+        resetNames();
+        resetValues();
+    }
+
+    </script>
+
+    <div class="title">
+        <h1> KingDomino Scoresheet! </h1>
+    </div>
+
+        
+    <div class="scores">
+    <div class="player1 player">
+    <input type="text" class="P1name name" value="Player 1">
+    <input type="number" class="P1score score" id="P1sand" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score" id="P1meadow" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score" id="P1sea" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score" id="P1forest" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score" id="P1mines" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" id="answer" readonly>
+    </div>
+
+    <div class="player2 player">
+    <input type="text" class="P2name name" value="Player 2">
+    <input type="number" class="P2score score" id="P2sand" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score" id="P2meadow" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score" id="P2sea" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score" id="P2forest" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score" id="P2mines" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" id="answer" readonly>
+    </div>
+
+    <div class="player3 player">
+    <input type="text" class="P3name name" value="Player 3">
+    <input type="number" class="P3score score" id="P3sand" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score" id="P3meadow" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score" id="P3sea" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score" id="P3forest" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score" id="P3mines" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" id="answer" readonly>
+    </div>
+
+    <div class="player4 player">
+    <input type="text" class="P4name name" value="Player 4">
+    <input type="number" class="P4score score" id="P4sand" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score" id="P4meadow" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score" id="P4sea" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score" id="P4forest" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score" id="P4mines" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" id="answer" readonly>
+    </div>
+    </div>
+
+    <div class="buttons">
+        <input type="button" onclick="resetValues()" value="New Round">
+        <input type="button" onclick="resetGame()" value="New Game">
+    </div>
+
+
+
+</body>
+</html> 
