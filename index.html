@@ -2,106 +2,56 @@
 <html>
 <head>
 <link href="style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="actions.js"></script>
 </head>
 <body>
-    <script> 
-    function totalScoreForPlayer(player) {
-        console.log(player);
-        var className = player + 'score';
-        console.log(className);
-        var all = document.getElementsByClassName(className);
-        var allVals = Array.from(all)
-        sum = allVals.reduce(getSum, 0);
-        var y = document.getElementById(player + "answer");
-        y.value = sum;
-    }
-
-    function getSum(total, num) {
-        return total + parseInt(num.value);
-    }
-
-    function resetNames() {
-        var names =  document.getElementsByClassName('name');
-        console.log(names);
-        for (i = 0; i < names.length; i++) {
-            names[i].value = "Player " + parseInt((i + 1));
-        }
-    }
-    
-    function resetValues() {
-        console.log('reset scores');
-        var scores = document.getElementsByClassName('score');
-        for (i = 0; i < scores.length; i++) {
-            scores[i].value = 0;
-        }
-    }
-
-    function resetGame() {
-        resetNames();
-        resetValues();
-    }
-
-    </script>
-
-    <div class="title">
+   <div class="title">
         <h1> KingDomino Scoresheet! </h1>
     </div>
 
-    <div class ="temp">
-    <div class="labels">        
-    <div class="label"> <p>Names</p> </div>
-    <div class="label"><p>sand</p></div>
-    <div class="label"><p>meadow</p></div>
-    <div class="label"><p>sea</p></div>
-    <div class="label"><p>swamp</p></div>
-    <div class="label"><p>forest</p></div>
-    <div class="label"><p>mines</p></div>
-    <div class="label"><p>total</p></div>
-    </div>
     <div class="scores">
     <div class="player1 player">
     <input type="text" class="P1name name" value="Player 1">
-    <input type="number" class="P1score score" id="P1sand" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" class="P1score score" id="P1meadow" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" class="P1score score" id="P1sea" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" class="P1score score" id="P1swamp" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" class="P1score score" id="P1forest" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" class="P1score score" id="P1mines" onchange="totalScoreForPlayer('P1')" value="0">
-    <input type="number" id="P1answer" readonly>
+    <input type="number" class="P1score score sand" id="P1sand" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score meadow" id="P1meadow" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score sea" id="P1sea" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score swamp" id="P1swamp" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score forest" id="P1forest" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" class="P1score score mines" id="P1mines" onchange="totalScoreForPlayer('P1')" value="0">
+    <input type="number" id="P1answer" class="answer" value="0" readonly>
     </div>
 
     <div class="player2 player">
     <input type="text" class="P2name name" value="Player 2">
-    <input type="number" class="P2score score" id="P2sand" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" class="P2score score" id="P2meadow" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" class="P2score score" id="P2sea" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" class="P2score score" id="P2swamp" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" class="P2score score" id="P2forest" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" class="P2score score" id="P2mines" onchange="totalScoreForPlayer('P2')" value="0">
-    <input type="number" id="P2answer" readonly>
+    <input type="number" class="P2score score sand" id="P2sand" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score meadow" id="P2meadow" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score sea" id="P2sea" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score swamp" id="P2swamp" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score forest" id="P2forest" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" class="P2score score mines" id="P2mines" onchange="totalScoreForPlayer('P2')" value="0">
+    <input type="number" id="P2answer" class="answer" value="0" readonly>
     </div>
 
     <div class="player3 player">
     <input type="text" class="P3name name" value="Player 3">
-    <input type="number" class="P3score score" id="P3sand" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" class="P3score score" id="P3meadow" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" class="P3score score" id="P3sea" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" class="P3score score" id="P3swamp" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" class="P3score score" id="P3forest" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" class="P3score score" id="P3mines" onchange="totalScoreForPlayer('P3')" value="0">
-    <input type="number" id="P3answer" readonly>
+    <input type="number" class="P3score score sand" id="P3sand" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score meadow" id="P3meadow" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score sea" id="P3sea" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score swamp" id="P3swamp" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score forest" id="P3forest" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" class="P3score score mines" id="P3mines" onchange="totalScoreForPlayer('P3')" value="0">
+    <input type="number" id="P3answer" class="answer" value="0" readonly>
     </div>
 
     <div class="player4 player">
     <input type="text" class="P4name name" value="Player 4">
-    <input type="number" class="P4score score" id="P4sand" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" class="P4score score" id="P4meadow" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" class="P4score score" id="P4sea" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" class="P4score score" id="P4swamp" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" class="P4score score" id="P4forest" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" class="P4score score" id="P4mines" onchange="totalScoreForPlayer('P4')" value="0">
-    <input type="number" id="P4answer" readonly>
-    </div>
+    <input type="number" class="P4score score sand" id="P4sand" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score meadow" id="P4meadow" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score sea" id="P4sea" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score swamp" id="P4swamp" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score forest" id="P4forest" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" class="P4score score mines" id="P4mines" onchange="totalScoreForPlayer('P4')" value="0">
+    <input type="number" id="P4answer" class="answer" value="0" readonly>
     </div>
     </div>
 
